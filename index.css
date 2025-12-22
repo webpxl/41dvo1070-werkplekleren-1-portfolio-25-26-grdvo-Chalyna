@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Calibri, sans-serif;
     line-height: 1.7;
     color: #333;
 }
@@ -27,7 +27,7 @@ header {
 }
 
 header img.logo {
-    height: 65px;
+    height: 70px;
     transition: transform 0.3s;
 }
 
@@ -67,7 +67,7 @@ header img.logo:hover {
 
 .naamtekst {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -77,13 +77,6 @@ header img.logo:hover {
 
 .naamtekst h1 {
     font-size: 4.5rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.naamtekst h2 {
-    font-size: 1.8rem;
-    font-weight: 500;
 }
 
 /* Intro */
@@ -103,8 +96,7 @@ header img.logo:hover {
 }
 
 .intro img {
-    width: 380px;
-    max-width: 100%;
+    width: 450px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
@@ -135,7 +127,7 @@ header img.logo:hover {
 
 .projectenkaarten {
     display: flex;
-    gap: 30px;
+    gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -144,6 +136,7 @@ header img.logo:hover {
     background: white;
     color: #02519C;
     border-radius: 15px;
+    padding-bottom: 10px;
     overflow: hidden;
     width: 100%;
     max-width: 360px;
