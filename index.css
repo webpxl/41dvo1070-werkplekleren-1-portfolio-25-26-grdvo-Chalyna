@@ -1,0 +1,160 @@
+header {
+    background-color: #02519C;
+    color: #ffffff;
+    padding: 10px;
+    display: flex;
+    }
+
+header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+
+header ul li {
+    margin: 10px;
+    display : inline-block;
+    }
+
+
+.naam img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    }
+
+.naamtekst {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    color: #ffffff;
+    text-align: center;
+    }
+
+.intro{
+    width: 100%;
+    background-color: #B8D0EA;
+    display: flex;
+    justify-content: center;
+    }
+
+.introbinnenkant {
+    display: flex;
+    width: 70%;
+    padding: 40px;
+    gap: 2rem;
+    color: #02519C;
+    }
+
+.intro img {
+    border-radius: 10px;
+    width: 40%;
+    }
+
+.intro p {
+    padding: 20px;
+    }
+
+.projecten {
+    display: flex;
+    justify-content: center;
+    padding: 80px 0;
+    background-color: #02519C;
+    }
+
+.projectentitel {
+    margin-bottom: 40px;
+    color: #ffffff;
+    }
+
+.projectenbinnenkant {
+    width: 70%;
+    }
+
+.project1, .project2, .project3 {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    color: #02519C;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    }
+
+.projectenkaarten {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    }
+
+
+.project1 img, .project2 img, .project3 img {
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    }
+
+.leefboom {
+    width: 100%;
+    background-color: #B8D0EA;
+    display: flex;
+    justify-content: center;
+    }
+
+.leefboombinnenkant {
+    display: flex;
+    width: 70%;
+    padding: 40px;
+    gap: 2rem;
+    color: #02519C;
+    }
+
+.leefboom img {
+    border-radius: 10px;
+    width: 40%;
+    }
+
+.leefboomtekst {
+    padding: 20px;
+    }
+
+.knop {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #B8D0EA;
+    border-radius: 5px;
+    color: #02519C;
+    text-decoration: none;
+    cursor: pointer;
+    }
+
+.knop2 {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #02519C;
+    border-radius: 5px;
+    color: #B8D0EA;
+    text-decoration: none;
+    cursor: pointer;
+    }
+
+.contact {
+    background-color: #02519C;
+    display: flex;
+    justify-content: center;
+    }
+
+.contact ul {
+    list-style: none;
+    padding: 0;
+    }
+
+.contactbinnenkant {
+    width: 70%;
+    color: #ffffff;
+    }
