@@ -1,160 +1,261 @@
+/* Reset & basis */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    color: #333;
+}
+
+/* Header + menu */
 header {
     background-color: #02519C;
-    color: #ffffff;
-    padding: 10px;
+    padding: 15px 40px;
     display: flex;
-    }
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 
-header ul {
+header img.logo {
+    height: 65px;
+    transition: transform 0.3s;
+}
+
+header img.logo:hover {
+    transform: scale(1.08);
+}
+
+.menu {
     list-style: none;
-    padding: 0;
-    margin: 0;
-    }
+    display: flex;
+    gap: 35px;
+}
 
-header ul li {
-    margin: 10px;
-    display : inline-block;
-    }
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
 
+.menu a:hover {
+    color: #B8D0EA;
+}
+
+/* Hero met naam */
+.naam {
+    position: relative;
+    margin-top: 90px; /* ruimte voor vaste header */
+}
 
 .naam img {
     width: 100%;
     height: auto;
-    display: flex;
-    justify-content: center;
-    }
+    display: block;
+}
 
 .naamtekst {
     position: absolute;
-    top: 25%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -25%);
-    color: #ffffff;
+    transform: translate(-50%, -50%);
+    color: white;
     text-align: center;
-    }
+    text-shadow: 0 3px 10px rgba(0,0,0,0.6);
+}
 
-.intro{
-    width: 100%;
+.naamtekst h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.naamtekst h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+/* Intro */
+.intro {
     background-color: #B8D0EA;
-    display: flex;
-    justify-content: center;
-    }
+    padding: 100px 0;
+}
 
 .introbinnenkant {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
-    width: 70%;
-    padding: 40px;
-    gap: 2rem;
+    align-items: center;
+    gap: 50px;
     color: #02519C;
-    }
+}
 
 .intro img {
-    border-radius: 10px;
-    width: 40%;
-    }
+    width: 380px;
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
 
 .intro p {
-    padding: 20px;
-    }
+    font-size: 1.15rem;
+    padding: 0;
+}
 
+/* Projecten */
 .projecten {
-    display: flex;
-    justify-content: center;
-    padding: 80px 0;
     background-color: #02519C;
-    }
-
-.projectentitel {
-    margin-bottom: 40px;
-    color: #ffffff;
-    }
+    padding: 100px 0;
+    color: white;
+}
 
 .projectenbinnenkant {
-    width: 70%;
-    }
-
-.project1, .project2, .project3 {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    color: #02519C;
-    width: 100%;
-    max-width: 300px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
     text-align: center;
-    }
+}
+
+.projectentitel {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+}
 
 .projectenkaarten {
     display: flex;
-    gap: 2rem;
-    justify-content: space-between;
-    }
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
+.project1, .project2, .project3 {
+    background: white;
+    color: #02519C;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 360px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project1:hover, .project2:hover, .project3:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
 
 .project1 img, .project2 img, .project3 img {
     width: 100%;
-    height: 350px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    }
+    height: 260px;
+    object-fit: cover;
+}
 
-.leefboom {
-    width: 100%;
-    background-color: #B8D0EA;
-    display: flex;
-    justify-content: center;
-    }
+.project1 h4, .project2 h4, .project3 h4 {
+    margin: 20px 0 10px;
+    font-size: 1.4rem;
+}
 
-.leefboombinnenkant {
-    display: flex;
-    width: 70%;
-    padding: 40px;
-    gap: 2rem;
-    color: #02519C;
-    }
-
-.leefboom img {
-    border-radius: 10px;
-    width: 40%;
-    }
-
-.leefboomtekst {
-    padding: 20px;
-    }
+/* Knoppen */
+.knop, .knop2 {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
 
 .knop {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
     background-color: #B8D0EA;
-    border-radius: 5px;
     color: #02519C;
-    text-decoration: none;
-    cursor: pointer;
-    }
+}
+
+.knop:hover {
+    background-color: white;
+    color: #02519C;
+    transform: translateY(-3px);
+}
 
 .knop2 {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
     background-color: #02519C;
-    border-radius: 5px;
     color: #B8D0EA;
-    text-decoration: none;
-    cursor: pointer;
-    }
+    border: 2px solid #B8D0EA;
+}
 
+.knop2:hover {
+    background-color: #B8D0EA;
+    color: #02519C;
+}
+
+/* Leefboom */
+.leefboom {
+    background-color: #B8D0EA;
+    padding: 100px 0;
+}
+
+.leefboombinnenkant {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    color: #02519C;
+}
+
+.leefboom img {
+    width: 450px;
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.leefboomtekst {
+    padding: 0;
+}
+
+.leefboomtekst h3 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+/* Contact */
 .contact {
     background-color: #02519C;
-    display: flex;
-    justify-content: center;
-    }
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+}
+
+.contactbinnenkant {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contactbinnenkant h3 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
 
 .contact ul {
     list-style: none;
-    padding: 0;
-    }
+    font-size: 1.3rem;
+}
 
-.contactbinnenkant {
-    width: 70%;
-    color: #ffffff;
-    }
+.contact ul li {
+    margin: 15px 0;
+}
