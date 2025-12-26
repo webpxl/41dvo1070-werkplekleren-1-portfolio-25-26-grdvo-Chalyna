@@ -1,0 +1,62 @@
+/* Projecten overzicht pagina */
+
+.project-header {
+    background-color: #02519C;
+    color: white;
+    padding: 120px 0 80px;
+    text-align: center;
+    margin-top: 90px;
+}
+
+.project-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.projecten-overzicht {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+}
+
+.projecten-grid {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.project-kaart {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 360px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-kaart:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.project-kaart img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.kaart-inhoud {
+    padding: 20px;
+    color: #02519C;
+    text-align: center;
+}
+
+.kaart-inhoud h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.kaart-inhoud p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
