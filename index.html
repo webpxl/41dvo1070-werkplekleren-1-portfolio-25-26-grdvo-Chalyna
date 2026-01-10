@@ -1,103 +1,212 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfolio Chalyna Brughmans</title>
-  <!-- Bootstrap core CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio Chalyna Brughmans</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <!--menu balk-->
-    <header>
-        <img src="afbeeldingen/logoportfolio.png" alt="logo portfolio Chalyna Brughmans" class="logo" width="177" height="75">
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="overzichtprojecten.html">Projecten</a></li>
-                <li><a href="leefboom.html">Leefboom</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <!--naam-->
-        <section class="naam">
-            <img src="afbeeldingen/golvenportfolio.png" height="313" width="1366"/></section>
+
+<header>
+    <img src="afbeeldingen/logoportfolio.png" alt="logo portfolio Chalyna Brughmans" class="logo">
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="overzichtprojecten.html">Projecten</a></li>
+            <li><a href="leefboom.html">Leefboom</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- Hero -->
+    <section class="naam">
+        <img src="afbeeldingen/golvenportfolio.png" alt="">
         <div class="naamtekst">
             <h1>Chalyna Brughmans</h1>
-            <br>
             <h2>Creatief, gestructureerd en gemotiveerd.</h2>
         </div>
+    </section>
 
-        <!--korte intro tekst-->
-        <section class="intro">
-            <div class="introbinnenkant">
-                <img src="afbeeldingen/foto.jpeg" alt="foto van Chalyna">
-                <p>Hallo, ik ben Chalyna Brughmans,
-                    <br>
-                    <br>
-                    19 jaar en ik volg het eerste jaar Digitale Vormgeving aan PXL in Hasselt. Ik combineer dit met Leefboom als student zelfstandige, waar ik veel leer zoals zelfstandig werken en verantwoordelijkheid nemen.
-                    <br>
-                    <br>
-                    Ik doe deze richting omdat ik ervan houd dingen te ontwerpen, uit proberen en creatief bezig zijn. In mijn vrije tijd wandel en tekening ik graag ook ben ik veel bezig met Leefboom.
-                    <br>
-                    <br>
-                    Ik neem je graag mee in mijn portfolio en laat zien waar ik tot nu toe mee bezig ben geweest.
-                </p>
-            </div>
-        </section>
+    <!-- Intro -->
+    <section class="intro">
+        <div class="introbinnenkant">
+            <img src="afbeeldingen/foto.jpeg" alt="foto van Chalyna">
+            <p>
+                Hallo, ik ben Chalyna Brughmans.<br><br>
+                Ik ben 19 jaar en volg het eerste jaar Digitale Vormgeving aan PXL Hasselt.
+                Deze studie combineer ik met Leefboom als student zelfstandige, waar ik leer
+                om zelfstandig te werken en verantwoordelijkheid te nemen.<br><br>
+                Ik kies voor deze richting omdat ik graag ontwerp, experimenteer en creatief bezig ben.
+                In mijn vrije tijd wandel en teken ik graag en ben ik veel bezig met Leefboom.<br><br>
+                Neem gerust een kijkje in mijn portfolio en ontdek waar ik tot nu toe aan gewerkt heb.
+            </p>
+        </div>
+    </section>
 
-        <!--projecten-->
-        <section class="projecten">
-            <div class="projectenbinnenkant">
+    <!-- Projecten -->
+    <section class="projecten">
+        <div class="projectenbinnenkant">
+            <h3 class="projectentitel">Recente projecten</h3>
 
-                <h3 class="projectentitel">Recente projecten:</h3>
+            <div class="projectenkaarten">
 
-                <div class="projectenkaarten">
-                    <section class="project1">
-                        <img src="afbeeldingen/projectkerstkaart1.png" alt="kerstkaart">
-                        <h4>Kerstkaart ontwerp</h4>
-                        <p>Ik een kerstkaart ontworpen, voor school dynamiek bekijk hier het proces.</p>
-                        <a href="kerstkaartontwerp.html" class="knop">Bekijk meer</a>
-                    </section>
-                    <section class="project2">
-                        <img src="afbeeldingen/wcdeuren1.jpg" alt="bestickering wc deuren">
-                        <h4>Bestickering wc deuren</h4>
-                        <p>Voor de school klimop heb ik mee wc deuren bestickerd, bekijk hier het proces.</p>
-                        <a href="wcdeuren.html" class="knop">Bekijk meer</a>
-                    </section>
-                    <section class="project3">
-                        <img src="afbeeldingen/stageverslag4.jpg" alt="stageverslag">
-                        <h4>Folder stageverslag</h4>
-                        <p>In 2025 deed ik mijn stage bij Identiq,</br>hier vind je mijn stage folder.</p>
-                        <a href="stageverslag.html" class="knop">Bekijk meer</a>
-                    </section>
+                <section class="project-kaart">
+                    <img src="afbeeldingen/wcdeuren1.jpg" alt="bestickering wc deuren">
+                    <div class="project-inhoud">
+                        <div class="project-tekst">
+                            <span class="project-datum">06-2025</span>
+                            <h4>Bestickering wc deuren</h4>
+                            <p>Bestickering van wc-deuren.</p>
+                        </div>
+                        <a href="wcdeuren.html" class="knop klein">Bekijk project</a>
+                    </div>
+                </section>
+
+                <section class="project-kaart">
+                    <img src="afbeeldingen/stageverslag4.jpg" alt="stageverslag">
+                    <div class="project-inhoud">
+                        <div class="project-tekst">
+                            <span class="project-datum">03-2025</span>
+                            <h4>Identiq</h4>
+                            <p>Stageverslag</p>
+                        </div>
+                        <a href="stageverslag.html" class="knop klein">Bekijk project</a>
+                    </div>
+                </section>
+
+                <section class="project-kaart">
+                    <img src="afbeeldingen/zee7.jpg" alt="foto zee">
+                    <div class="project-inhoud">
+                        <div class="project-tekst">
+                            <span class="project-datum">02-2025</span>
+                            <h4>Fotografie</h4>
+                            <p>Foto's van de zee.</p>
+                        </div>
+                        <a href="zee.html" class="knop klein">Bekijk project</a>
+                    </div>
+                </section>
+
+                <section class="project-kaart">
+                    <img src="afbeeldingen/atelierbeaute4.png" alt="logo atelier beaute">
+                    <div class="project-inhoud">
+                        <div class="project-tekst">
+                            <span class="project-datum">02-2025</span>
+                            <h4>Atelier Beauté</h4>
+                            <p>Ontwerpen van een logo.</p>
+                        </div>
+                        <a href="atelierbeaute.html" class="knop klein">Bekijk project</a>
+                    </div>
+                </section>
+
+                <section class="project-kaart">
+                    <img src="afbeeldingen/kaartjefinaal.png" alt="kaartbrievenbusgeluk">
+                    <div class="project-inhoud">
+                        <div class="project-tekst">
+                            <span class="project-datum">12-2024</span>
+                            <h4>PopPub</h4>
+                            <p>Ontwerp van een kaartbrievenbusgeluk.</p>
+                        </div>
+                        <a href="kaartjebrievenbusgeluk.html" class="knop klein">Bekijk project</a>
+                    </div>
+                </section>
+
+                <section class="project-kaart">
+                    <img src="afbeeldingen/bistrovertlogos3.png" alt="logo bistro vert">
+                    <div class="project-inhoud">
+                        <div class="project-tekst">
+                            <span class="project-datum">11-2024</span>
+                            <h4>Bistro Vert</h4>
+                            <p>Ontwerp van een logo.</p>
+                        </div>
+                        <a href="bistrovert.html" class="knop klein">Bekijk project</a>
+                    </div>
+                </section>
+
+                <section class="project-kaart">
+                    <img src="afbeeldingen/projectkerstkaart1.png" alt="kerstkaart ontwerp">
+                    <div class="project-inhoud">
+                        <div class="project-tekst">
+                            <span class="project-datum">10-2024</span>
+                            <h4>Dynamiek</h4>
+                            <p>Ontwerp van een kerstkaart.</p>
+                        </div>
+                        <a href="kerstkaartontwerp.html" class="knop klein">Bekijk project</a>
+                    </div>
+                </section>
+
+                <section class="project-kaart">
+                    <img src="afbeeldingen/tobaschets.jpg" alt="schetsen logo toba">
+                    <div class="project-inhoud">
+                        <div class="project-tekst">
+                            <span class="project-datum">09-2024</span>
+                            <h4>Toba</h4>
+                            <p>Ontwerp van een Logo.</p>
+                        </div>
+                        <a href="toba.html" class="knop klein">Bekijk project</a>
+                    </div>
+                </section>
+
                 </div>
                 <a href="overzichtprojecten.html" class="knop">Bekijk alle projecten</a>
             </div>
-        </section>
-        <section class="leefboom">
-            <div class="leefboombinnenkant">
-                <img src="afbeeldingen/leefboommarkt.png" alt="leefboom markt">
-                <div class="leefboomtekst">
-                    <h3>Leefboom</h3>
-                    <p>Ik combineer mijn studie met Leefboom als student zelfstandige, waar ik veel leer zoals zelfstandig werken en verantwoordelijkheid nemen. Klik op de knop hieronder om meer te weten te komen over Leefboom.</p>
-                    <a href="overzichtprojecten.html" class="knop2">Meer over Leefboom</a>
-                </div>
-            </div>
 
-        </section>
-        <section class="contact">
-            <div class="contactbinnenkant">
-                <h3>Heb je een project in gedachten of wil je samenwerken? Stuur me een bericht!</h3>
-                <ul>
-                    <li>0492949671</li>
-                    <li>chalynabrughmans@gmail.com</li>
-                    <li>Oude tiensestraat 30 3473 Waanrode</li>
-                </ul>
+        </div>
+    </section>
+
+    <section class="leefboom">
+        <div class="leefboombinnenkant">
+            <img src="afbeeldingen/leefboommarkt.png" alt="leefboom markt">
+
+            <div class="leefboomtekst">
+                <h3>Leefboom</h3>
+                <p>
+                    Ik combineer mijn studie met Leefboom als student zelfstandige,
+                    waar ik leer om zelfstandig te werken en verantwoordelijkheid te nemen.
+                    Klik op de knop hieronder om meer te weten te komen over Leefboom.
+                </p>
+                <a href="leefboom.html" class="knop2">Meer over Leefboom</a>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
+
+</main>
+
+<footer class="contact">
+    <div class="contactbinnenkant">
+        <h3>
+            Heb je een project in gedachten of wil je samenwerken?<br>
+            Stuur me een bericht!
+        </h3>
+
+        <ul class="contactgegevens">
+            <li><strong>Telefoon:</strong> 0492949671</li>
+            <li><strong>Email:</strong> chalynabrughmans@gmail.com</li>
+            <li><strong>Adres:</strong> Oude Tiensestraat 30, 3473 Waanrode</li>
+        </ul>
+
+        <div class="socialmedia">
+            <p>Leefboom</p>
+            <a href="https://www.instagram.com/leefboom_/" target="_blank">
+                <img src="afbeeldingen/instagram.svg" alt="Instagram logo">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61566137889264#" target="_blank">
+                <img src="afbeeldingen/facebook.svg" alt="Facebook logo">
+            </a>
+            <a href="https://www.leefboom.be/" target="_blank">
+                <img src="afbeeldingen/website.svg" alt="Website Leefboom">
+            </a>
+            <a href="https://nl.pinterest.com/Leefboom/" target="_blank">
+                <img src="afbeeldingen/pintrest.svg" alt="Pinterest">
+            </a>
+        </div>
+
+        <p class="copyright">
+            &copy; 2026 Chalyna Brughmans. Alle rechten voorbehouden.
+        </p>
+    </div>
+</footer>
+
 </body>
 </html>
