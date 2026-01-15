@@ -5,16 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Leefboom – Chalyna Brughmans</title>
     <link rel="stylesheet" href="index.css">
+    <script src="menu.js"></script>
 </head>
 <body>
 
 <header>
     <img src="afbeeldingen/logoportfolio.png" alt="logo portfolio Chalyna Brughmans" class="logo">
-    <nav>
+
+    <!-- Hamburger knop (zichtbaar op mobiel/tablet) -->
+    <button class="hamburger" aria-label="Menu openen/sluiten">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Navigatie (wordt getoond/verstopt) -->
+    <nav class="nav-menu">
         <ul class="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="overzichtprojecten.html">Projecten</a></li>
             <li><a href="leefboom.html">Leefboom</a></li>
+            <li><a href="portfolio.html">Taken</a></li>
         </ul>
     </nav>
 </header>

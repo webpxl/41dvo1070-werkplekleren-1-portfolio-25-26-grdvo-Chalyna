@@ -1,4 +1,4 @@
-/* Algemeen */
+/* ===================== ALGEMEEN ===================== */
 * {
     margin: 0;
     padding: 0;
@@ -12,10 +12,60 @@ body {
     background-color: #fff;
 }
 
-/* Header */
+     /* Professionele styling voor rollenpagina */
+ .main-taken {
+     max-width: 1100px;
+     margin: auto;
+     padding: 120px 20px 60px;
+ }
+
+.main-taken h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #02519C;
+}
+
+.taken-button {
+    display: inline-block;
+    background-color: #B8D0EA;
+    color: #02519C;
+    padding: 14px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 50px;
+    transition: 0.3s;
+}
+
+.taken-button:hover {
+    background-color: #02519C;
+    color: #B8D0EA;
+}
+
+.rol-kaart {
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    padding: 25px 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.rol-kaart h4 {
+    color: #02519C;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.rol-kaart p {
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* ===================== HEADER ===================== */
 header {
     background-color: #02519C;
-    padding: 15px 40px;
+    padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,27 +79,69 @@ header {
     height: 65px;
 }
 
+/* Desktop menu */
 .menu {
     list-style: none;
     display: flex;
     gap: 30px;
+    margin: 0;
 }
 
 .menu a {
     color: white;
     text-decoration: none;
     font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.2s;
 }
 
-/* Hero */
-.naam {
-    margin-top: 90px;
-    position: relative;
+.menu a:hover {
+    color: #B8D0EA;
 }
 
-.naam img {
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.hamburger span {
     width: 100%;
-    display: block; /* Verwijdert witruimte */
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ===================== HERO / NAAM ===================== */
+.naam {
+    margin-top: 90px; /* ruimte voor fixed header */
+    position: relative;
+    height: 70vh;
+    min-height: 480px;
+    background-image: url('afbeeldingen/golvenportfolio.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .naamtekst {
@@ -59,20 +151,27 @@ header {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.75);
+    width: 92%;
+    max-width: 1200px;
+    padding: 20px;
 }
 
 .naamtekst h1 {
-    font-size: 4rem;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-size: clamp(3.2rem, 9vw, 11rem);
+    font-weight: 800;
+    line-height: 0.92;
+    margin-bottom: 0.15em;
+    letter-spacing: -0.02em;
 }
-
 
 .naamtekst h2 {
-    font-size: 1.6rem; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    margin-top: 10px;
+    font-size: clamp(1.4rem, 4.2vw, 3.4rem);
+    font-weight: 400;
+    opacity: 0.95;
 }
 
-/* Intro */
+/* ===================== INTRO ===================== */
 .intro {
     background-color: #B8D0EA;
     padding: 100px 20px;
@@ -84,32 +183,30 @@ header {
     display: flex;
     gap: 50px;
     align-items: center;
-    flex-wrap: wrap; /* Voor mobiel blijft dit goed */
+    flex-wrap: wrap;
 }
 
 .introbinnenkant img {
-    width: 400px;       /* Breedte van de foto */
-    max-width: 100%;    /* Responsief */
-    border-radius: 15px;
-    flex-shrink: 0;     /* Voorkomt dat de foto krimpt */
-}
-
-.introbinnenkant p {
-    flex: 1;            /* Neemt de resterende ruimte in */
-    min-width: 250px;   /* Zorgt dat het niet te smal wordt */
-}
-
-.intro img {
     width: 400px;
     max-width: 100%;
     border-radius: 15px;
+    flex-shrink: 0;
 }
 
-/* Projecten homepage */
+.introbinnenkant p {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* ===================== PROJECTEN ===================== */
 .projecten {
     background-color: #02519C;
-    padding: 60px 20px;
     color: white;
+    padding: 60px 20px;
+}
+
+.projecten-overzicht {
+    padding: 60px 20px;
 }
 
 .projectenbinnenkant {
@@ -125,7 +222,6 @@ header {
     flex-wrap: wrap;
 }
 
-/* Project kaarten (homepage en overzicht) */
 .project-kaart {
     background: white;
     border-radius: 20px;
@@ -148,26 +244,18 @@ header {
     object-fit: cover;
 }
 
-/* Project inhoud */
-.project-inhoud,
-.kaart-inhoud {
+.project-inhoud {
     padding: 25px;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-
-    /* 🔹 Toegevoegde aanpassingen voor centrering */
-    justify-content: center;  /* Verticaal centreren */
-    align-items: center;      /* Horizontaal centreren */
-    text-align: center;       /* Tekst centreren */
+    align-items: center;
+    text-align: center;
 }
 
-/* Tekst wrapper binnen project-inhoud */
 .project-tekst {
-    margin-bottom: 20px; /* Ruimte tussen tekst en knop */
+    margin-bottom: 20px;
 }
 
-/* Datum */
 .project-datum {
     font-size: 0.85rem;
     opacity: 0.7;
@@ -175,7 +263,7 @@ header {
     margin-bottom: 10px;
 }
 
-/* Knoppen */
+/* ===================== KNOPPEN ===================== */
 .knop {
     background-color: #B8D0EA;
     color: #02519C;
@@ -184,9 +272,9 @@ header {
     text-decoration: none;
     font-weight: 600;
     margin-top: 10px;
-    align-self: center;
-    text-align: center;
     transition: 0.3s;
+    text-align: center;
+    display: inline-block;
 }
 
 .knop:hover {
@@ -194,40 +282,28 @@ header {
     color: #B8D0EA;
 }
 
-.knop-klein {
+.knop.klein {
     padding: 10px 22px;
     font-size: 0.9rem;
 }
 
-/* Projecten overzicht */
-.project-header {
-    margin-top: 80px;
-    padding: 80px 20px;
-    background: linear-gradient(135deg, #02519C, #013c74);
+.knop2 {
+    background-color: #02519C;
     color: white;
-    text-align: center;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    display: inline-block;
 }
 
-.projecten-overzicht {
-    background-color: #f4f7fb;
-    padding: 100px 20px;
+.knop2:hover {
+    background-color: white;
+    color: #02519C;
 }
 
-.projecten-grid {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    gap: 40px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.terug-knop {
-    display: flex;
-    justify-content: center;
-    margin-top: 60px;
-}
-/* Leefboom sectie */
+/* ===================== LEAFBOOM ===================== */
 .leefboom {
     background-color: #B8D0EA;
     padding: 100px 20px;
@@ -257,42 +333,22 @@ header {
     margin-bottom: 20px;
 }
 
-.leefboomtekst p {
-    margin-bottom: 25px;
-}
-
-/* Tweede knopstijl */
-.knop2 {
-    background-color: #02519C;
-    color: white;
-    padding: 12px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.knop2:hover {
-    background-color: white;
-    color: #02519C;
-}
-
-/* Footer */
+/* ===================== FOOTER ===================== */
 .contact {
     background-color: #02519C;
     color: white;
-    padding: 0px 40px 60px;
+    padding: 50px 40px 60px;
     text-align: center;
 }
 
 .contactbinnenkant {
     max-width: 900px;
-height: 300px; margin: auto;
+    margin: auto;
 }
 
 .contactgegevens {
     list-style: none;
-    margin: 40px 40px;
+    margin: 40px 0;
 }
 
 .socialmedia {
@@ -300,6 +356,7 @@ height: 300px; margin: auto;
     justify-content: center;
     gap: 20px;
     align-items: center;
+    margin: 30px 0;
 }
 
 .socialmedia img {
@@ -312,15 +369,111 @@ height: 300px; margin: auto;
     opacity: 0.8;
 }
 
-/* Responsive */
+/* ===================== RESPONSIVE ===================== */
+
 @media (max-width: 900px) {
-    .introbinnenkant {
-        flex-direction: column;
+    .hamburger {
+        display: flex;
     }
 
-    .projectenkaarten,
-    .projecten-grid {
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 320px;
+        height: 100vh;
+        background-color: #02519C;
+        padding: 100px 30px 30px;
+        transition: right 0.35s ease;
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 35px;
+        align-items: flex-start;
+    }
+
+    .menu li a {
+        font-size: 1.5rem;
+        padding: 10px 0;
+    }
+
+    .introbinnenkant,
+    .leefboombinnenkant {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .projectenkaarten {
         flex-direction: column;
         align-items: center;
     }
+
+    .logo {
+        height: 55px;
+    }
 }
+
+@media (max-width: 600px) {
+    .naam {
+        height: 60vh;
+        min-height: 420px;
+    }
+
+    .project-kaart {
+        width: 90%;
+    }
+
+    .introbinnenkant img,
+    .leefboombinnenkant img {
+        width: 100%;
+    }
+}
+
+/* Extra bescherming hele kleine schermen */
+@media (max-width: 480px) {
+    .naamtekst h1 {
+        font-size: clamp(2.6rem, 10vw, 4.2rem);
+    }
+
+    .naamtekst h2 {
+        font-size: clamp(1.2rem, 5vw, 1.8rem);
+    }
+}
+
+/* ===================== EINDREFLECTIE ===================== */
+
+.eindreflectie {
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.eindreflectie h4 {
+    color: #02519C;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.eindreflectie p {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.eindreflectie img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 30px auto 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+

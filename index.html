@@ -5,16 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portfolio Chalyna Brughmans</title>
     <link rel="stylesheet" href="index.css">
+    <script src="menu.js"></script>
 </head>
 <body>
 
 <header>
     <img src="afbeeldingen/logoportfolio.png" alt="logo portfolio Chalyna Brughmans" class="logo">
-    <nav>
+
+    <!-- Hamburger knop (zichtbaar op mobiel/tablet) -->
+    <button class="hamburger" aria-label="Menu openen/sluiten">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Navigatie (wordt getoond/verstopt) -->
+    <nav class="nav-menu">
         <ul class="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="overzichtprojecten.html">Projecten</a></li>
             <li><a href="leefboom.html">Leefboom</a></li>
+            <li><a href="portfolio.html">Taken</a></li>
         </ul>
     </nav>
 </header>
@@ -22,7 +33,6 @@
 <main>
     <!-- Hero -->
     <section class="naam">
-        <img src="afbeeldingen/golvenportfolio.png" alt="">
         <div class="naamtekst">
             <h1>Chalyna Brughmans</h1>
             <h2>Creatief, gestructureerd en gemotiveerd.</h2>
@@ -53,6 +63,30 @@
             <div class="projectenkaarten">
 
                 <section class="project-kaart">
+                    <img src="afbeeldingen/oreganoenco1.png" alt="foto website">
+                    <div class="project-inhoud">
+                        <div class="project-tekst">
+                            <span class="project-datum">12-2025</span>
+                            <h4>Oregano en co.</h4>
+                            <p>Website Oregano en Co. scripting.</p>
+                        </div>
+                        <a href="oreganoenco.html" class="knop klein">Bekijk project</a>
+                    </div>
+                </section>
+
+                <section class="project-kaart">
+                    <img src="afbeeldingen/dieren16.jpg" alt="koeien foto">
+                    <div class="project-inhoud">
+                        <div class="project-tekst">
+                            <span class="project-datum">06-2025</span>
+                            <h4>Fotografie</h4>
+                            <p>Fotograferen van dieren.</p>
+                        </div>
+                        <a href="dieren.html" class="knop klein">Bekijk project</a>
+                    </div>
+                </section>
+
+                <section class="project-kaart">
                     <img src="afbeeldingen/wcdeuren1.jpg" alt="bestickering wc deuren">
                     <div class="project-inhoud">
                         <div class="project-tekst">
@@ -61,90 +95,6 @@
                             <p>Bestickering van wc-deuren.</p>
                         </div>
                         <a href="wcdeuren.html" class="knop klein">Bekijk project</a>
-                    </div>
-                </section>
-
-                <section class="project-kaart">
-                    <img src="afbeeldingen/stageverslag4.jpg" alt="stageverslag">
-                    <div class="project-inhoud">
-                        <div class="project-tekst">
-                            <span class="project-datum">03-2025</span>
-                            <h4>Identiq</h4>
-                            <p>Stageverslag</p>
-                        </div>
-                        <a href="stageverslag.html" class="knop klein">Bekijk project</a>
-                    </div>
-                </section>
-
-                <section class="project-kaart">
-                    <img src="afbeeldingen/zee7.jpg" alt="foto zee">
-                    <div class="project-inhoud">
-                        <div class="project-tekst">
-                            <span class="project-datum">02-2025</span>
-                            <h4>Fotografie</h4>
-                            <p>Foto's van de zee.</p>
-                        </div>
-                        <a href="zee.html" class="knop klein">Bekijk project</a>
-                    </div>
-                </section>
-
-                <section class="project-kaart">
-                    <img src="afbeeldingen/atelierbeaute4.png" alt="logo atelier beaute">
-                    <div class="project-inhoud">
-                        <div class="project-tekst">
-                            <span class="project-datum">02-2025</span>
-                            <h4>Atelier Beauté</h4>
-                            <p>Ontwerpen van een logo.</p>
-                        </div>
-                        <a href="atelierbeaute.html" class="knop klein">Bekijk project</a>
-                    </div>
-                </section>
-
-                <section class="project-kaart">
-                    <img src="afbeeldingen/kaartjefinaal.png" alt="kaartbrievenbusgeluk">
-                    <div class="project-inhoud">
-                        <div class="project-tekst">
-                            <span class="project-datum">12-2024</span>
-                            <h4>PopPub</h4>
-                            <p>Ontwerp van een kaartbrievenbusgeluk.</p>
-                        </div>
-                        <a href="kaartjebrievenbusgeluk.html" class="knop klein">Bekijk project</a>
-                    </div>
-                </section>
-
-                <section class="project-kaart">
-                    <img src="afbeeldingen/bistrovertlogos3.png" alt="logo bistro vert">
-                    <div class="project-inhoud">
-                        <div class="project-tekst">
-                            <span class="project-datum">11-2024</span>
-                            <h4>Bistro Vert</h4>
-                            <p>Ontwerp van een logo.</p>
-                        </div>
-                        <a href="bistrovert.html" class="knop klein">Bekijk project</a>
-                    </div>
-                </section>
-
-                <section class="project-kaart">
-                    <img src="afbeeldingen/projectkerstkaart1.png" alt="kerstkaart ontwerp">
-                    <div class="project-inhoud">
-                        <div class="project-tekst">
-                            <span class="project-datum">10-2024</span>
-                            <h4>Dynamiek</h4>
-                            <p>Ontwerp van een kerstkaart.</p>
-                        </div>
-                        <a href="kerstkaartontwerp.html" class="knop klein">Bekijk project</a>
-                    </div>
-                </section>
-
-                <section class="project-kaart">
-                    <img src="afbeeldingen/tobaschets.jpg" alt="schetsen logo toba">
-                    <div class="project-inhoud">
-                        <div class="project-tekst">
-                            <span class="project-datum">09-2024</span>
-                            <h4>Toba</h4>
-                            <p>Ontwerp van een Logo.</p>
-                        </div>
-                        <a href="toba.html" class="knop klein">Bekijk project</a>
                     </div>
                 </section>
 
@@ -203,7 +153,7 @@
         </div>
 
         <p class="copyright">
-            &copy; 2026 Chalyna Brughmans. Alle rechten voorbehouden.
+            <a href="privacy.txt">&copy; 2026 Chalyna Brughmans. Alle rechten voorbehouden.</a>
         </p>
     </div>
 </footer>
