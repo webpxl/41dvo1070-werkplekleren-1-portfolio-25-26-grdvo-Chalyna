@@ -24,24 +24,24 @@ body {
     background-color: var(--white);
 }
 
-/* ===================== MAIN TAKEN ===================== */
-.main-taken {
-    max-width: 1100px;
-    margin: auto;
-    padding: 120px 20px 60px;
-}
+     /* Professionele styling voor rollenpagina */
+ .main-taken {
+     max-width: 1100px;
+     margin: auto;
+     padding: 120px 20px 60px;
+ }
 
 .main-taken h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: var(--primary);
+    color: #0e5461;
 }
 
 .taken-button {
     display: inline-block;
     background-color: var(--white);
-    color: var(--primary);
+    color: #0e5461;
     padding: 14px 30px;
     border-radius: 50px;
     text-decoration: none;
@@ -51,8 +51,8 @@ body {
 }
 
 .taken-button:hover {
-    background-color: var(--primary);
-    color: var(--white);
+    background-color: #0e5461;
+    color: #ffffff;
 }
 
 .rol-kaart {
@@ -64,7 +64,7 @@ body {
 }
 
 .rol-kaart h4 {
-    color: var(--primary);
+    color: #0e5461;
     margin-bottom: 15px;
     font-size: 1.4rem;
 }
@@ -108,10 +108,10 @@ header {
 }
 
 .menu a:hover {
-    color: var(--secondary-1);
+    color: var(--white);
 }
 
-/* ===================== HAMBURGER ===================== */
+/* Hamburger */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -129,17 +129,31 @@ header {
     height: 3px;
     background-color: var(--white);
     border-radius: 3px;
+    transition: all 0.3s ease;
 }
 
-/* ===================== HERO ===================== */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ===================== HERO / NAAM ===================== */
 .naam {
-    margin-top: 90px;
+    margin-top: 90px; /* ruimte voor fixed header */
     position: relative;
     height: 70vh;
     min-height: 480px;
     background-image: url('afbeeldingen/golvenportfolio.png');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .naamtekst {
@@ -151,17 +165,22 @@ header {
     color: var(--white);
     text-shadow: 3px 3px 10px rgba(0,0,0,0.75);
     width: 92%;
+    max-width: 1200px;
+    padding: 20px;
 }
 
 .naamtekst h1 {
     font-size: clamp(3.2rem, 9vw, 11rem);
     font-weight: 800;
     line-height: 0.92;
+    margin-bottom: 0.15em;
+    letter-spacing: -0.02em;
 }
 
 .naamtekst h2 {
     font-size: clamp(1.4rem, 4.2vw, 3.4rem);
     font-weight: 400;
+    opacity: 0.95;
 }
 
 /* ===================== INTRO ===================== */
@@ -183,13 +202,29 @@ header {
     width: 400px;
     max-width: 100%;
     border-radius: 15px;
+    flex-shrink: 0;
+}
+
+.introbinnenkant p {
+    flex: 1;
+    min-width: 250px;
 }
 
 /* ===================== PROJECTEN ===================== */
 .projecten {
-    background-color: var(--primary);
+    background-color: #0e5461;
     color: var(--white);
     padding: 60px 20px;
+}
+
+.projecten-overzicht {
+    padding: 60px 20px;
+}
+
+.projectentitel {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
 }
 
 .projectenbinnenkant {
@@ -213,12 +248,13 @@ header {
     display: flex;
     flex-direction: column;
     transition: 0.3s;
-    color: var(--primary);
+    color: #0e5461;
     box-shadow: 0 25px 45px rgba(0,0,0,0.25);
 }
 
 .project-kaart:hover {
     transform: translateY(-8px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.25);
 }
 
 .project-kaart img {
@@ -235,43 +271,60 @@ header {
     text-align: center;
 }
 
+.project-tekst {
+    margin-bottom: 20px;
+}
+
 .project-datum {
     font-size: 0.85rem;
-    opacity: 0.8;
-    color: var(--secondary-1);
+    opacity: 0.7;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
 }
 
 /* ===================== KNOPPEN ===================== */
 .knop {
     background-color: var(--white);
-    color: var(--primary);
+    color: #0e5461;
     padding: 12px 28px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
+    margin-top: 10px;
     transition: 0.3s;
+    text-align: center;
+    display: inline-block;
 }
 
 .knop:hover {
-    background-color: var(--accent);
-    color: var(--white);
+    background-color: var(--white);
+    color: #0e5461;
+}
+
+.knop.klein {
+    padding: 10px 22px;
+    font-size: 0.9rem;
 }
 
 .knop2 {
-    background-color: var(--primary);
+    background-color: #0e5461;
     color: var(--white);
     padding: 12px 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
     transition: 0.3s;
+    display: inline-block;
 }
 
 .knop2:hover {
-    background-color: var(--accent);
+    background-color: var(--white);
+    color: #0e5461;
 }
 
-/* ===================== LEEFBOOM ===================== */
+/* ===================== LEAFBOOM ===================== */
 .leefboom {
     background-color: var(--white);
     padding: 100px 20px;
@@ -286,30 +339,44 @@ header {
     flex-wrap: wrap;
 }
 
-/* FIXED BUG (was fout in jouw code) */
 .leefboombinnenkant img {
     width: 450px;
     max-width: 100%;
     border-radius: 20px;
 }
 
+.leefboomtekst {
+    flex: 1;
+}
+
+.leefboomtekst h3 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
 /* ===================== FOOTER ===================== */
 .contact {
-    background-color: var(--primary);
+    background-color: #0e5461;
     color: var(--white);
     padding: 50px 40px 60px;
     text-align: center;
 }
 
-.contact a {
-    color: var(--white);
-    text-decoration: none;
+.contactbinnenkant {
+    max-width: 900px;
+    margin: auto;
+}
+
+.contactgegevens {
+    list-style: none;
+    margin: 40px 0;
 }
 
 .socialmedia {
     display: flex;
     justify-content: center;
     gap: 20px;
+    align-items: center;
     margin: 30px 0;
 }
 
@@ -317,11 +384,45 @@ header {
     width: 28px;
 }
 
-/* ===================== RESPONSIVE ===================== */
-@media (max-width: 900px) {
+.copyright {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
 
+/* ===================== RESPONSIVE ===================== */
+
+@media (max-width: 900px) {
     .hamburger {
         display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 320px;
+        height: 100vh;
+        background-color: #0e5461;
+        padding: 100px 30px 30px;
+        transition: right 0.35s ease;
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 35px;
+        align-items: flex-start;
+    }
+
+    .menu li a {
+        font-size: 1.5rem;
+        padding: 10px 0;
     }
 
     .introbinnenkant,
@@ -341,6 +442,11 @@ header {
 }
 
 @media (max-width: 600px) {
+    .naam {
+        height: 60vh;
+        min-height: 420px;
+    }
+
     .project-kaart {
         width: 90%;
     }
@@ -349,4 +455,74 @@ header {
     .leefboombinnenkant img {
         width: 100%;
     }
+}
+
+/* Extra bescherming hele kleine schermen */
+@media (max-width: 480px) {
+    .naamtekst h1 {
+        font-size: clamp(2.6rem, 10vw, 4.2rem);
+    }
+
+    .naamtekst h2 {
+        font-size: clamp(1.2rem, 5vw, 1.8rem);
+    }
+}
+
+/* ===================== EINDREFLECTIE ===================== */
+
+.eindreflectie {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.eindreflectie h4 {
+    color: #0e5461;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.eindreflectie p {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.eindreflectie img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 30px auto 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.contact a {
+    color: white;
+    text-decoration: none; /* optioneel: geen onderlijning */
+}
+
+.contact a:hover {
+    color: var(--white); /* optioneel hover-kleur */
+}
+
+
+.terug-knop {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* 10px afstand tot contact strook */
+}
+
+.contact {
+    width: 100%;
+    margin: 0;
+}
+
+.nav-menu {
+    z-index: 9999;
+}
+
+header {
+    z-index: 9000;
 }
