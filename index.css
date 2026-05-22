@@ -1,3 +1,15 @@
+:root {
+    /* BRAND COLORS */
+    --primary: #0E5461;
+    --secondary-1: #E6A81D;
+    --secondary-2: #37642A;
+    --accent: #508530;
+
+    /* NEUTRALS */
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
 /* ===================== ALGEMEEN ===================== */
 * {
     margin: 0;
