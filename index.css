@@ -1,13 +1,19 @@
 :root {
-    /* BRAND COLORS */
-    --primary: #0E5461;
-    --secondary-1: #E6A81D;
-    --secondary-2: #37642A;
-    --accent: #508530;
+    /* BRAND COLORS — bloemen palet */
+    --primary: #7a9e6e;          /* saliegroen */
+    --primary-dark: #5c7a52;
+    --primary-light: #d4e6cc;
+    --secondary-1: #c9956c;      /* terracotta */
+    --secondary-2: #e8d5c4;      /* warme crème */
+    --secondary-3: #3d5a3e;      /* donker bosgroen */
+    --accent: #b5634a;           /* diep terracotta accent */
 
     /* NEUTRALS */
-    --black: #000000;
+    --black: #1a1a1a;
     --white: #FFFFFF;
+    --off-white: #faf7f4;
+    --grey: #f0ebe6;
+    --text: #3d3530;
 }
 
 /* ===================== ALGEMEEN ===================== */
@@ -18,55 +24,64 @@
 }
 
 body {
-    font-family: Calibri, sans-serif;
-    color: var(--primary);
+    font-family: Cairo, sans-serif
+    color: var(--text);
     line-height: 1.7;
-    background-color: var(--white);
+    background-color: var(--off-white);
+    background-repeat: repeat;
+    background-size: 400px 400px;
 }
 
-     /* Professionele styling voor rollenpagina */
- .main-taken {
-     max-width: 1100px;
-     margin: auto;
-     padding: 120px 20px 60px;
- }
+/* ===================== ROLLEN / TAKEN ===================== */
+.main-taken {
+    max-width: 1100px;
+    margin: auto;
+    padding: 120px 20px 60px;
+}
 
 .main-taken h2 {
     text-align: center;
-    font-size: 2.5rem;
+    font-family: corsair, sans-serif;
+    font-size: 2.8rem;
+    font-style: italic;
     margin-bottom: 40px;
-    color: #0e5461;
+    color: var(--primary);
 }
 
 .taken-button {
     display: inline-block;
-    background-color: var(--white);
-    color: #0e5461;
-    padding: 14px 30px;
+    background-color: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    padding: 14px 34px;
     border-radius: 50px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
+    letter-spacing: 0.05em;
     margin-bottom: 50px;
-    transition: 0.3s;
+    transition: all 0.35s ease;
 }
 
 .taken-button:hover {
-    background-color: #0e5461;
-    color: #ffffff;
+    background-color: var(--primary);
+    color: var(--white);
 }
 
 .rol-kaart {
-    background-color: #f5f5f5;
-    border-radius: 15px;
-    padding: 25px 30px;
+    background-color: var(--white);
+    border-radius: 16px;
+    padding: 28px 32px;
     margin-bottom: 30px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-left: 4px solid var(--primary-light);
+    box-shadow: 0 4px 24px rgba(61,90,62,0.08);
 }
 
 .rol-kaart h4 {
-    color: #0e5461;
-    margin-bottom: 15px;
-    font-size: 1.4rem;
+    font-family: Cairo, sans-serif;
+    color: var(--primary);
+    margin-bottom: 12px;
+    font-size: 1.45rem;
+    font-weight: 600;
 }
 
 .rol-kaart p {
@@ -76,22 +91,37 @@ body {
 
 /* ===================== HEADER ===================== */
 header {
-    background-color: var(--primary);
-    padding: 15px 30px;
+    background-color: var(--secondary-3);
+    padding: 14px 36px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000;
+    z-index: 9000;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Subtiele bloem-lijn decoratie in header */
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg,
+    transparent 0%,
+    var(--primary) 20%,
+    var(--secondary-1) 50%,
+    var(--primary) 80%,
+    transparent 100%);
+    opacity: 0.5;
 }
 
 .logo {
     height: 65px;
 }
 
-/* Desktop menu */
 .menu {
     list-style: none;
     display: flex;
@@ -100,15 +130,33 @@ header {
 }
 
 .menu a {
-    color: var(--white);
+    color: var(--secondary-2);
     text-decoration: none;
-    font-weight: 500;
-    font-size: 1.1rem;
-    transition: color 0.2s;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.25s;
+    position: relative;
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px; left: 0; right: 0;
+    height: 1px;
+    background-color: var(--primary-light);
+    transform: scaleX(0);
+    transition: transform 0.25s ease;
 }
 
 .menu a:hover {
-    color: var(--white);
+    color: var(--primary-light);
+}
+
+.menu a:hover::after {
+    transform: scaleX(1);
 }
 
 /* Hamburger */
@@ -117,7 +165,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     width: 32px;
-    height: 24px;
+    height: 22px;
     background: none;
     border: none;
     cursor: pointer;
@@ -126,27 +174,19 @@ header {
 
 .hamburger span {
     width: 100%;
-    height: 3px;
-    background-color: var(--white);
-    border-radius: 3px;
+    height: 2px;
+    background-color: var(--secondary-2);
+    border-radius: 2px;
     transition: all 0.3s ease;
 }
 
-.hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(8px, 8px);
-}
-
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
-}
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(7px, 7px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
 
 /* ===================== HERO / NAAM ===================== */
 .naam {
-    margin-top: 90px; /* ruimte voor fixed header */
+    margin-top: 90px;
     position: relative;
     height: 70vh;
     min-height: 480px;
@@ -154,6 +194,18 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* Bloem SVG overlay links en rechts */
+.naam::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+            radial-gradient(ellipse 400px 400px at 0% 100%, rgba(61,90,62,0.35) 0%, transparent 70%),
+            radial-gradient(ellipse 300px 300px at 100% 0%, rgba(122,158,110,0.25) 0%, transparent 70%);
+    z-index: 1;
 }
 
 .naamtekst {
@@ -163,37 +215,56 @@ header {
     transform: translate(-50%, -50%);
     text-align: center;
     color: var(--white);
-    text-shadow: 3px 3px 10px rgba(0,0,0,0.75);
     width: 92%;
     max-width: 1200px;
     padding: 20px;
+    z-index: 2;
 }
 
 .naamtekst h1 {
-    font-size: clamp(3.2rem, 9vw, 11rem);
-    font-weight: 800;
+    font-family: corsair, sans-serif;
+    font-size: clamp(3.5rem, 9vw, 11rem);
+    font-weight: 700;
     line-height: 0.92;
-    margin-bottom: 0.15em;
-    letter-spacing: -0.02em;
+    margin-bottom: 0.2em;
+    letter-spacing: 0.01em;
+    text-shadow: 2px 4px 24px rgba(0,0,0,0.45);
 }
 
 .naamtekst h2 {
-    font-size: clamp(1.4rem, 4.2vw, 3.4rem);
-    font-weight: 400;
-    opacity: 0.95;
+    font-family: corsair, sans-serif;
+    font-size: clamp(1.1rem, 3vw, 2rem);
+    font-weight: 300;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    opacity: 0.92;
+    text-shadow: 1px 2px 10px rgba(0,0,0,0.3);
 }
 
 /* ===================== INTRO ===================== */
 .intro {
-    background-color: var(--white);
+    background-color: var(--off-white);
     padding: 100px 20px;
+    position: relative;
+}
+
+/* SVG bloem decoratie intro */
+.intro::before {
+    content: '';
+    position: absolute;
+    top: 40px; right: 60px;
+    width: 120px; height: 120px;
+    background-image: url(afbeeldingen/bloemen01.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
 }
 
 .introbinnenkant {
     max-width: 1100px;
     margin: auto;
     display: flex;
-    gap: 50px;
+    gap: 60px;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -201,20 +272,37 @@ header {
 .introbinnenkant img {
     width: 400px;
     max-width: 100%;
-    border-radius: 15px;
+    border-radius: 20px;
     flex-shrink: 0;
+    box-shadow: 0 20px 60px rgba(61,90,62,0.15);
 }
 
 .introbinnenkant p {
     flex: 1;
     min-width: 250px;
+    font-size: 1.05rem;
+    color: var(--text);
 }
 
 /* ===================== PROJECTEN ===================== */
 .projecten {
-    background-color: #0e5461;
+    background-color: var(--secondary-3);
     color: var(--white);
-    padding: 60px 20px;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decoratieve bloem rechtsonder in projecten */
+.projecten::after {
+    content: '';
+    position: absolute;
+    bottom: -30px; right: -30px;
+    width: 200px; height: 200px;
+    background-image: url(afbeeldingen/bloemen02.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
 }
 
 .projecten-overzicht {
@@ -223,8 +311,11 @@ header {
 
 .projectentitel {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
+    font-family: corsair, sans-serif;
+    font-size: 2.8rem;
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 50px;
 }
 
 .projectenbinnenkant {
@@ -235,11 +326,13 @@ header {
 
 .projectenkaarten {
     display: flex;
-    gap: 40px;
+    gap: 36px;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 
+/* PROJECT KAARTJES — ongewijzigd qua structuur, professioneel opgemaakt */
 .project-kaart {
     background: var(--white);
     border-radius: 20px;
@@ -247,14 +340,14 @@ header {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: 0.3s;
-    color: #0e5461;
-    box-shadow: 0 25px 45px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: var(--text);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
 }
 
 .project-kaart:hover {
     transform: translateY(-8px);
-    box-shadow: 0 25px 45px rgba(0,0,0,0.25);
+    box-shadow: 0 24px 50px rgba(0,0,0,0.22);
 }
 
 .project-kaart img {
@@ -276,65 +369,115 @@ header {
 }
 
 .project-datum {
-    font-size: 0.85rem;
-    opacity: 0.7;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
+    font-size: 0.8rem;
+    opacity: 0.55;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: var(--primary);
+}
+
+.project-kaart h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--secondary-3);
+    margin-bottom: 6px;
 }
 
 /* ===================== KNOPPEN ===================== */
+
+/* Knop op DONKERE achtergrond (projecten sectie, header nav) → wit */
 .knop {
     background-color: var(--white);
-    color: #0e5461;
-    padding: 12px 28px;
+    color: var(--primary);
+    padding: 12px 30px;
     border-radius: 50px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
     margin-top: 10px;
-    transition: 0.3s;
+    border: 2px solid var(--white);
+    transition: all 0.3s ease;
     text-align: center;
     display: inline-block;
 }
 
 .knop:hover {
-    background-color: var(--white);
-    color: #0e5461;
+    background-color: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(122,158,110,0.35);
 }
 
 .knop.klein {
-    padding: 10px 22px;
-    font-size: 0.9rem;
+    padding: 9px 22px;
+    font-size: 0.88rem;
+    /* Op witte kaart-achtergrond → primary kleur knop */
+    background-color: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
 }
 
+.knop.klein:hover {
+    background-color: var(--white);
+    color: var(--primary);
+    border-color: var(--primary);
+    box-shadow: 0 6px 18px rgba(122,158,110,0.25);
+}
+
+/* knop2 — op witte achtergrond (leefboom sectie) → primary */
 .knop2 {
-    background-color: #0e5461;
+    background-color: var(--primary);
     color: var(--white);
-    padding: 12px 30px;
-    margin-top: 20px;
+    padding: 13px 34px;
+    margin-top: 24px;
     margin-bottom: 20px;
     border-radius: 50px;
     text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    border: 2px solid var(--primary);
+    transition: all 0.3s ease;
     display: inline-block;
 }
 
 .knop2:hover {
     background-color: var(--white);
-    color: #0e5461;
+    color: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(122,158,110,0.3);
 }
 
-/* ===================== LEAFBOOM ===================== */
+/* ===================== LEEFBOOM ===================== */
 .leefboom {
-    background-color: var(--white);
+    background-color: var(--off-white);
     padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Bloem links in leefboom */
+.leefboom::before {
+    content: '';
+    position: absolute;
+    top: 30px; left: -20px;
+    width: 160px; height: 160px;
+    background-image: url(afbeeldingen/bloemen01.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    transform: rotate(-20deg);
 }
 
 .leefboombinnenkant {
     max-width: 1100px;
     margin: auto;
     display: flex;
-    gap: 50px;
+    gap: 60px;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -343,6 +486,7 @@ header {
     width: 450px;
     max-width: 100%;
     border-radius: 20px;
+    box-shadow: 0 16px 48px rgba(61,90,62,0.12);
 }
 
 .leefboomtekst {
@@ -350,26 +494,73 @@ header {
 }
 
 .leefboomtekst h3 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: 600;
+    color: var(--secondary-3);
+    margin-bottom: 18px;
 }
 
 /* ===================== FOOTER ===================== */
 .contact {
-    background-color: #0e5461;
-    color: var(--white);
-    padding: 50px 40px 60px;
+    background-color: var(--secondary-3);
+    color: var(--secondary-2);
+    padding: 60px 40px 60px;
     text-align: center;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decoratieve bloem footer */
+.contact::before {
+    content: '';
+    position: absolute;
+    top: -40px; left: -40px;
+    width: 180px; height: 180px;
+    background-image: url(afbeeldingen/bloemen02.svg);
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+/* Groene scheidingslijn bovenaan footer */
+.contact::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg,
+    transparent,
+    var(--primary) 30%,
+    var(--secondary-1) 50%,
+    var(--primary) 70%,
+    transparent);
+    opacity: 0.6;
 }
 
 .contactbinnenkant {
     max-width: 900px;
     margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.contactbinnenkant h3 {
+    font-family: corsair, sans-serif;
+    font-size: 1.9rem;
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.5;
 }
 
 .contactgegevens {
     list-style: none;
-    margin: 40px 0;
+    margin: 36px 0;
+    color: var(--secondary-2);
+    font-size: 0.95rem;
+    line-height: 2;
 }
 
 .socialmedia {
@@ -381,21 +572,79 @@ header {
 }
 
 .socialmedia img {
-    width: 28px;
+    width: 26px;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.socialmedia img:hover {
+    opacity: 1;
 }
 
 .copyright {
     margin-top: 30px;
-    font-size: 0.9rem;
-    opacity: 0.8;
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+.contact a {
+    color: var(--secondary-2);
+    text-decoration: none;
+}
+
+.contact a:hover {
+    color: var(--white);
+}
+
+/* ===================== EINDREFLECTIE ===================== */
+.eindreflectie {
+    background-color: var(--white);
+    border-radius: 16px;
+    padding: 30px 36px;
+    margin-bottom: 30px;
+    border-left: 4px solid var(--primary-light);
+    box-shadow: 0 4px 24px rgba(61,90,62,0.08);
+}
+
+.eindreflectie h4 {
+    font-family: corsair, sans-serif;
+    color: var(--primary);
+    margin-bottom: 14px;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.eindreflectie p {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.eindreflectie img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 30px auto 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.terug-knop {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.nav-menu {
+    z-index: 9999;
+}
+
+header {
+    z-index: 9000;
 }
 
 /* ===================== RESPONSIVE ===================== */
-
 @media (max-width: 900px) {
-    .hamburger {
-        display: flex;
-    }
+    .hamburger { display: flex; }
 
     .nav-menu {
         position: fixed;
@@ -404,15 +653,13 @@ header {
         width: 80%;
         max-width: 320px;
         height: 100vh;
-        background-color: #0e5461;
+        background-color: var(--secondary-3);
         padding: 100px 30px 30px;
         transition: right 0.35s ease;
         z-index: 999;
     }
 
-    .nav-menu.active {
-        right: 0;
-    }
+    .nav-menu.active { right: 0; }
 
     .menu {
         flex-direction: column;
@@ -421,7 +668,7 @@ header {
     }
 
     .menu li a {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         padding: 10px 0;
     }
 
@@ -436,9 +683,7 @@ header {
         align-items: center;
     }
 
-    .logo {
-        height: 55px;
-    }
+    .logo { height: 55px; }
 }
 
 @media (max-width: 600px) {
@@ -447,82 +692,15 @@ header {
         min-height: 420px;
     }
 
-    .project-kaart {
-        width: 90%;
-    }
+    .project-kaart { width: 90%; }
 
     .introbinnenkant img,
-    .leefboombinnenkant img {
-        width: 100%;
-    }
+    .leefboombinnenkant img { width: 100%; }
 }
 
-/* Extra bescherming hele kleine schermen */
 @media (max-width: 480px) {
-    .naamtekst h1 {
-        font-size: clamp(2.6rem, 10vw, 4.2rem);
-    }
-
-    .naamtekst h2 {
-        font-size: clamp(1.2rem, 5vw, 1.8rem);
-    }
+    .naamtekst h1 { font-size: clamp(2.6rem, 10vw, 4.2rem); }
+    .naamtekst h2 { font-size: clamp(1rem, 5vw, 1.6rem); }
 }
-
-/* ===================== EINDREFLECTIE ===================== */
-
-.eindreflectie {
-    background-color: var(--white);
-    border-radius: 15px;
-    padding: 30px;
-    margin-bottom: 30px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-.eindreflectie h4 {
-    color: #0e5461;
-    margin-bottom: 15px;
-    font-size: 1.4rem;
-}
-
-.eindreflectie p {
-    font-size: 1rem;
-    line-height: 1.7;
-}
-
-.eindreflectie img {
-    width: 100%;
-    max-width: 500px;
-    display: block;
-    margin: 30px auto 0;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.contact a {
-    color: white;
-    text-decoration: none; /* optioneel: geen onderlijning */
-}
-
-.contact a:hover {
-    color: var(--white); /* optioneel hover-kleur */
-}
-
-
-.terug-knop {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px; /* 10px afstand tot contact strook */
-}
-
-.contact {
-    width: 100%;
-    margin: 0;
-}
-
-.nav-menu {
-    z-index: 9999;
-}
-
-header {
-    z-index: 9000;
-}
+CSSEOF
+echo "CSS geschreven"
