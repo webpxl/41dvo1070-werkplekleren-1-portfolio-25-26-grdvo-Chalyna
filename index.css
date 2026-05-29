@@ -24,7 +24,7 @@
 }
 
 body {
-    font-family: Cairo, sans-serif
+    font-family: Cairo, sans-serif;
     color: var(--text);
     line-height: 1.7;
     background-color: var(--off-white);
@@ -190,7 +190,7 @@ header::after {
     position: relative;
     height: 70vh;
     min-height: 480px;
-    background-image: url('afbeeldingen/golvenportfolio.png');
+    background-image: url("afbeeldingen/bloemenportfolio.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
