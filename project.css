@@ -1,19 +1,18 @@
 :root {
-    /* BRAND COLORS — bloemen palet */
-    --primary: #7a9e6e;          /* saliegroen */
+    --primary: #7a9e6e;
     --primary-dark: #5c7a52;
     --primary-light: #d4e6cc;
-    --secondary-1: #c9956c;      /* terracotta */
-    --secondary-2: #e8d5c4;      /* warme crème */
-    --secondary-3: #3d5a3e;      /* donker bosgroen */
-    --accent: #b5634a;           /* diep terracotta accent */
+    --secondary-1: #c9956c;
+    --secondary-2: #e8d5c4;
+    --secondary-3: #3d5a3e;
+    --accent: #b5634a;
 
-    /* NEUTRALS */
     --black: #1a1a1a;
     --white: #FFFFFF;
     --off-white: #faf7f4;
     --grey: #f0ebe6;
     --text: #3d3530;
+    }
 
     .project-header {
     background-color: var(--secondary-3);
@@ -21,7 +20,7 @@
     padding: 120px 0 80px;
     text-align: center;
     margin-top: 90px;
-}
+    }
 .project-header h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
